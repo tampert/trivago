@@ -1,7 +1,7 @@
 /**
  * Created by Dirk Soentjens on 10/03/15.
  *
- * Redefine the strings in textfields
+ * Redefine the content of the text fields in Photoshop CS6
  *
  */
 
@@ -14,8 +14,23 @@ function main() {
     preferences.rulerUnits = Units.PIXELS;
 
     try {
-        renameTitles("koe of kip");
-
+        //https://forums.adobe.com/message/2455288
+        // link to desktop work
+        // ~/Desktop/testing/creative_text.xml
+        // It would be nice to have the XML file in the same directory as the script
+        //~/Applications/Adobe%20Photoshop%20CS6/Presets/Scripts/trivago/
+        var f = new File('~/Desktop/creative_text.xml');
+        f.open('r');
+        var xml = new XML( f.read() );
+        alert(xml);
+        f.close();
+        // title node
+        var title = xml.child(0);
+        // subtitle node
+        var subtitle = xml.child(1);
+        //if(title == "")
+          //  title = "no results";
+        renameTitles(title);
     }
     catch (e) {
 
