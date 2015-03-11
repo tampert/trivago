@@ -1,5 +1,6 @@
 /**
  * Created by Dirk Soentjens on 11/03/15.
+ * This file exist out of a collection of functions
  */
 function changeTextByLayerWithPrompt(layerName){
     var doc = app.activeDocument;
