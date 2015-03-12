@@ -15,3 +15,14 @@ function changeTextByLayerName(layerName,newText){
     var layer = doc.layers.getByName(layerName);
     if(layer.kind == LayerKind.TEXT) layer.textItem.contents = newText;
 }
+
+//https://forums.adobe.com/message/2455288
+var f = new File('~/Desktop/testing/gallery.xml');
+f.open('r');
+var xml = new XML( f.read() );
+f.close();
+// photos node
+var photoXML = xml.child('photos');
+// first photo
+var photo1XML = photoXML.child(0);
+var title = photo1XML.child('title');
