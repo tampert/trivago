@@ -3,7 +3,6 @@
  * This script will update all the text fields with content given in the XML field that is needed
  */
 
-var allLayers = [];
 var allTextLayers = [];
 var theLayers = collectAllLayers(app.activeDocument, 0);
 
@@ -19,7 +18,7 @@ function collectAllLayers (theParent, level)
 
         if (theLayer.typename != "ArtLayer")
         {
-            allLayers.push(level + theLayer.name);
+            // new group
             collectAllLayers(theLayer, level + 1)
         }
     }
@@ -50,6 +49,7 @@ function updateSubTitles(newText){
 function main() {
     //Check if a document is open
     if (!documents.length) return;
+
     var originalUnit = preferences.rulerUnits;
     preferences.rulerUnits = Units.PIXELS;
 

@@ -3,7 +3,7 @@
  * source: http://www.tagwith.com/question_479755_photoshop-javascript-to-get-all-layers-in-the-active-document
  */
 
-var allLayers = [];
+//var allLayers = [];
 var all = [];
 var theLayers = collectAllLayers(app.activeDocument, 0);
 
@@ -16,13 +16,14 @@ function collectAllLayers (theParent, level)
         all.push(theLayer);
         if (theLayer.typename != "ArtLayer")
         {
-            allLayers.push(level + theLayer.name);
+            //new group
+            //allLayers.push(level + theLayer.name);
             collectAllLayers(theLayer, level + 1)
         }
     }
 }
-getTypes();
-
+//getTypes();
+alert("all.length = " + all.length)
 function getTypes(){
     for(var i=0; i<all.length; i++){
         alert(all[i].kind);

@@ -1,4 +1,9 @@
 <creative>
-    <title>Draag de sla</title>
-    <subtitle>Dirk is the best</subtitle>
+    <hotelsearch_title>Draag de sla</hotelsearch_title>
+    <checkin>checkin text</checkin>
+    <checkout>checkout text</checkout>
+    <room>room text</room>
+    <double>double text</double>
+    <city>city text</city>
+    <cta>Hotel search text button</cta>
 </creative>
