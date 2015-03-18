@@ -1,5 +1,5 @@
 /**
- * Created by dsoentjens on 11/03/15.
+ * Created by Dirk Soentjens on 11/03/15.
  * source: http://www.tagwith.com/question_479755_photoshop-javascript-to-get-all-layers-in-the-active-document
  */
 
@@ -23,7 +23,6 @@ function collectAllLayers (theParent, level)
     }
 }
 //getTypes();
-alert("all.length = " + all.length)
 function getTypes(){
     for(var i=0; i<all.length; i++){
         alert(all[i].kind);
