@@ -5,6 +5,10 @@ In the folder javascript_photoshop_CS6 are files that optimize and speed up our 
 
 F.e. functions that loop through layersets 
 
+If you use the file : DuplicateLayerSet.js you have to put the dealform_languages.xml on your desktop.
+
 Resources:
+
+
 http://www.adobe.com/devnet/photoshop/scripting.html
 http://objjob.phrogz.net/pshop/hierarchy
